@@ -1,0 +1,336 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Catppuccin Mocha */
+
+* {
+font-family: "JetBrainsMono Nerd Font", "noto-fonts-emoji", sans-serif;
+font-weight: bold;
+min-height: 0;
+font-size: 98%;
+font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+padding: 0.03125rem;
+}
+
+@import "mocha.css";
+
+window#waybar {
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  background: transparent;
+  border-radius: 10px;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#waybar.empty #window {
+  background: none;
+}
+
+/* This section can be use if you want to separate waybar modules */
+.modules-left, .modules-center, .modules-right {
+	background: #00000000;
+ 	border: 0px solid @overlay0;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-right: 4px;
+	padding-left: 4px;
+	border-radius: 12px;
+
+} 
+
+.modules-left, .modules-right {
+  border: 0px solid @blue;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-right: 4px;
+	padding-left: 4px;
+} 
+
+.modules-right {
+  background: transparent;
+}
+
+.modules-right > * {
+  background: #00000000;   /* semi‑transparent black pill     */
+  border-radius: 9px;
+  padding: 3px 8px;               /* inner space for icon & text     */
+
+  /*  ‑‑‑‑ the important part ‑‑‑‑  */
+  margin-left: 6px;               /* gap on the left of each pill    */
+  margin-right: 0;                /* rightmost pill touches the edge */
+  
+}
+
+#custom-power {
+  font-size: 160%;
+  padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 6px;
+	padding-left: 6px;
+  color: @red;
+  transition: background-color 0.3s ease;
+}
+
+#custom-launcher {
+  color: @blue;
+  font-size: 130%;
+  padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 6px;
+	padding-left: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+#custom-playerctl {
+  color: @text;
+  font-size: 95%;
+  font-weight: normal;
+  transition: background-color 0.3s ease;
+}
+
+#custom-playerctl.spotifyPlaying {
+  color: @green;
+}
+
+#custom-playerctl.firefoxPlaying {
+  color: @red;
+}
+
+#custom-playerctl.otherPlaying {
+  color: @sky;
+}
+
+#custom-playerctl.otherPaused
+#custom-playerctl.spotifyPaused
+#custom-playerctl.firefoxPaused {
+  color: @overlay1;
+}
+
+
+#backlight,
+#backlight-slider,
+#battery,
+#bluetooth,
+#clock,
+#cpu,
+#disk,
+#idle_inhibitor,
+#keyboard-state,
+#memory,
+#mode,
+#mpris,
+#network,
+#pulseaudio,
+#pulseaudio-slider,
+#taskbar button,
+#taskbar,
+#temperature,
+#tray,
+#window,
+#wireplumber,
+#workspaces,
+#custom-backlight,
+#custom-cycle_wall,
+#custom-keybinds,
+#custom-keyboard,
+#custom-light_dark,
+#custom-lock,
+#custom-menu,
+#custom-swaync,
+#custom-updater
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-right: 6px;
+	padding-left: 6px;
+}
+
+@keyframes blink {
+  to {
+    color: @surface0;
+  }
+}
+
+#clock {
+  color: @text;
+}
+
+#cpu {
+  color: @green;
+}
+
+#memory {
+  color: @sky;
+}
+
+#disk {
+  color: @sapphire;
+}
+
+#temperature {
+  color: @teal;
+}
+
+#temperature.critical {
+  background-color: @red;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+}
+
+#workspaces button {
+    box-shadow: none;
+	  text-shadow: none;
+    padding: 0px;
+    border-radius: 9px;
+    padding-left: 4px;
+    padding-right: 4px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+	border-radius: 10px;
+	color: @overlay0;
+	background-color: @surface0;
+ 	padding-left: 2px;
+    padding-right: 2px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button.persistent {
+	color: @surface1;
+	border-radius: 10px;
+}
+
+#workspaces button.active {
+	  color: @teal;
+  	border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button.urgent {
+	color: @red;
+ 	border-radius: 0px;
+}
+
+#taskbar button.active {
+    padding-left: 8px;
+    padding-right: 8px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#taskbar button:hover {
+    padding-left: 2px;
+    padding-right: 2px;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#custom-cava_mviz {
+	color: @pink;
+}
+
+#custom-menu {
+  color: @pink;
+}
+
+#custom-power {
+  color: @red;
+}
+
+#custom-updater {
+  color: @red;
+}
+
+#custom-light_dark {
+  color: @blue;
+}
+
+#custom-weather {
+  color: @lavender;
+}
+
+#custom-lock {
+  color: @maroon;
+}
+
+#pulseaudio {
+  color: @green;
+}
+
+#pulseaudio.bluetooth {
+  color: @pink;
+}
+#pulseaudio.muted {
+  color: @red;
+}
+
+#window {
+  color: @mauve;
+}
+
+#custom-waybar-mpris {
+  color:@lavender;
+}
+
+#network {
+  color: @teal;
+}
+
+#network.disconnected,
+#network.disabled {
+  background-color: @surface0;
+  color: @text;
+}
+
+#pulseaudio-slider slider {
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+	min-width: 80px;
+	min-height: 5px;
+	border-radius: 5px;
+}
+
+#pulseaudio-slider highlight {
+	min-height: 10px;
+	border-radius: 5px;
+}
+
+#backlight-slider slider {
+	min-width: 0px;
+	min-height: 0px;
+	opacity: 0;
+	background-image: none;
+	border: none;
+	box-shadow: none;
+}
+
+#backlight-slider trough {
+	min-width: 80px;
+	min-height: 10px;
+	border-radius: 5px;
+}
+
+#backlight-slider highlight {
+	min-width: 10px;
+	border-radius: 5px;
+}

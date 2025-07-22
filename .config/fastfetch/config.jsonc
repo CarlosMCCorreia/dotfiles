@@ -1,0 +1,98 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty-direct",
+    "source": "~/Pictures/sus/Rimuru-Tempest.png",
+    "width": 40,
+    "height": 20
+  },
+  "display": {
+    "separator": " ",
+  },
+    "modules": [
+    {
+      "type": "os",
+      "key": " OS",  // Arch Linux
+      "keyColor": "#FF00FF",
+      "valueColor": "#00FFFF"
+    },
+    {
+      "type": "kernel",
+      "key": " Kernel",  // Linux kernel
+      "keyColor": "#BD93F9",
+      "valueColor": "#00CED1"
+    },
+    {
+      "type": "de",
+      "key": " DE",  // KDE logo alt
+      "keyColor": "#FF00FF",
+      "valueColor": "#00FFFF"
+    },
+    {
+      "type": "wm",
+      "key": " WM",  // Window manager
+      "keyColor": "#FF00FF",
+      "valueColor": "#00CED1"
+    },
+    {
+      "type": "terminal",
+      "key": " Terminal",  // Terminal icon
+      "keyColor": "#BD93F9",
+      "valueColor": "#00FFFF"
+    },
+    {
+      "type": "shell",
+      "key": " Shell",  // Shell icon
+      "keyColor": "#FF00FF",
+      "valueColor": "#00CED1"
+    },
+    {
+      "type": "uptime",
+      "key": " Uptime",  // Clock icon
+      "keyColor": "#BD93F9",
+      "valueColor": "#00FFFF"
+    },
+    {
+      "type": "packages",
+      "key": "\uf487 Packages",  // Package box icon
+      "keyColor": "#FF00FF",
+      "valueColor": "#00CED1"
+    },
+    {
+      "type": "memory",
+      "key": "\uefc5 Memory",  // RAM chip
+      "keyColor": "#BD93F9",
+      "valueColor": "#00FFFF"
+    },
+    {
+      "type": "cpu",
+      "key": " CPU",  // Microchip
+      "keyColor": "#FF00FF",
+      "valueColor": "#00CED1"
+    },
+    {
+      "type": "gpu",
+      "key": "󰍹 GPU",  // GPU icon (NVIDIA)
+      "keyColor": "#BD93F9",
+      "valueColor": "#00FFFF"
+    },
+    {
+      "type": "disk",
+      "key": " Disk",  // Disk icon
+      "keyColor": "#FF00FF",
+      "valueColor": "#00CED1"
+    },
+    {
+      "type": "battery",
+      "key": " Battery",  // Full battery
+      "keyColor": "#BD93F9",
+      "valueColor": "#00FFFF"
+    },
+    {
+      "type": "locale",
+      "key": " Locale",  // Globe
+      "keyColor": "#FF00FF",
+      "valueColor": "#00CED1"
+    }
+  ]
+}

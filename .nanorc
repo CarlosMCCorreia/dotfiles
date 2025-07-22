@@ -1,0 +1,53 @@
+
+## Force .txt to be treated as bash
+syntax "txtbash" "\.txt$"
+color white "(\"[^\"]*\"|'[^']*')"
+color cyan "(#.*)"
+
+## Load all syntax highlighting files
+include /usr/share/nano/*.nanorc
+
+## UI options
+set constantshow
+set mouse
+set nonewlines
+set linenumbers
+
+## Editor
+set tabsize 2
+set tabstospaces
+set trimblanks
+set autoindent
+set constantshow
+set softwrap
+set nohelp
+set historylog
+set positionlog
+set zap
+set cutfromcursor
+set minibar
+
+## Color theme
+set titlecolor white,black
+set statuscolor black,yellow
+set keycolor white,magenta
+set numbercolor white
+
+# Binds
+bind ^Q   exit          all
+bind ^Z undo main
+bind M-R  redo          main
+bind ^C   copy          main
+bind ^V   paste         main
+bind ^X   cut           main
+bind ^K   zap           main
+bind ^H   chopwordleft  all
+bind M-/  comment       main
+bind ^Space complete    main
+bind ^F whereis main
+bind M-C  location      main
+bind M-E  findprevious  all
+bind ^R   replace       main
+bind ^_   gotoline      main
+bind ^G   firstline     all
+bind M-G  lastline      all

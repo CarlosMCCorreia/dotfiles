@@ -1,0 +1,12 @@
+fade-in=0.3
+effect-blur=7x5
+clock
+indicator
+grace=2
+ignore-empty-password
+line-color=00000000
+separator-color=00000000
+inside-color=00000088
+inside-clear-color=ffffff88
+text-color=eeeeeeff
+ring-color=6e6a86ff

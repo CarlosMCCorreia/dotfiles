@@ -1,0 +1,40 @@
+# vim:fileencoding=utf-8:foldmethod=marker
+
+font_family      JetBrainsMono Nerd Font
+
+font_size 16
+
+url_color #0087bd
+url_style curly
+
+open_url_with default
+
+url_prefixes file ftp ftps gemini git gopher http https irc ircs kitty mailto news sftp ssh
+
+detect_urls yes
+
+show_hyperlink_targets no
+
+repaint_delay 10
+ 
+enable_audio_bell no
+
+visual_bell_duration 0.0
+
+visual_bell_color none
+
+window_alert_on_bell no
+
+remember_window_size  yes
+initial_window_width  95
+initial_window_height 20
+
+foreground #dddddd
+background #000000
+
+background_opacity 0.8
+dynamic_background_opacity yes
+allow_remote_control yes
+shell_integration enabled
+
+background_blur 0
