@@ -2,97 +2,110 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "type": "kitty-direct",
-    "source": "~/Pictures/sus/Rimuru-Tempest.png",
+    "source": "~/Pictures/sus/pngegg.png",
     "width": 40,
     "height": 20
   },
   "display": {
     "separator": " ",
   },
-    "modules": [
+  "percent": {
+    "type": 9,         // 1=number, 2=bar, 3=both, 9=colored number
+    "color": {
+      "green": "green",
+      "yellow": "light_yellow",
+      "red": "light_red"
+    }
+  },
+  "modules": [
+   {
+        "type": "custom",
+        "format": "├──────────────────────────────────────────────────┤"
+    },
+    {
+      "key": "  user",
+      "type": "title",
+      "format": "{user-name}@{host-name}",
+      "keyColor": "31"
+    },
     {
       "type": "os",
-      "key": " OS",  // Arch Linux
-      "keyColor": "#FF00FF",
-      "valueColor": "#00FFFF"
+      "key": " OS",
+      "keycolor": "blue"
     },
     {
       "type": "kernel",
-      "key": " Kernel",  // Linux kernel
-      "keyColor": "#BD93F9",
-      "valueColor": "#00CED1"
-    },
-    {
-      "type": "de",
-      "key": " DE",  // KDE logo alt
-      "keyColor": "#FF00FF",
-      "valueColor": "#00FFFF"
+      "key": "  Kernel",
+      "keycolor": "light_red"
     },
     {
       "type": "wm",
-      "key": " WM",  // Window manager
-      "keyColor": "#FF00FF",
-      "valueColor": "#00CED1"
+      "key": "  WM",
+      "keycolor": "blue"
     },
     {
       "type": "terminal",
-      "key": " Terminal",  // Terminal icon
-      "keyColor": "#BD93F9",
-      "valueColor": "#00FFFF"
+      "key": "  Terminal",
+      "keycolor": "yellow"
     },
     {
       "type": "shell",
-      "key": " Shell",  // Shell icon
-      "keyColor": "#FF00FF",
-      "valueColor": "#00CED1"
+      "key": "  Shell",
+      "keycolor": "cyan" 
     },
     {
       "type": "uptime",
-      "key": " Uptime",  // Clock icon
-      "keyColor": "#BD93F9",
-      "valueColor": "#00FFFF"
+      "key": "  Uptime",
     },
     {
       "type": "packages",
-      "key": "\uf487 Packages",  // Package box icon
-      "keyColor": "#FF00FF",
-      "valueColor": "#00CED1"
+      "key": " \uf487 Packages",
+      "keycolor": "blue"
     },
     {
       "type": "memory",
-      "key": "\uefc5 Memory",  // RAM chip
-      "keyColor": "#BD93F9",
-      "valueColor": "#00FFFF"
+      "key": " \uefc5 Memory",
+      "percent": {
+        "type": 3,
+        "green": 40,
+        "yellow":70
+      },
+      "keycolor": "yellow"
+    },
+    {
+      "type": "swap",
+      "key": " 󰾷 Swap",
+      "keyColor": "cyan"
     },
     {
       "type": "cpu",
-      "key": " CPU",  // Microchip
-      "keyColor": "#FF00FF",
-      "valueColor": "#00CED1"
+      "key": "  CPU",
+      "keycolor": "red"
     },
     {
       "type": "gpu",
-      "key": "󰍹 GPU",  // GPU icon (NVIDIA)
-      "keyColor": "#BD93F9",
-      "valueColor": "#00FFFF"
+      "key": " 󰍹 GPU",
+      "keycolor": "cyan"
     },
     {
       "type": "disk",
-      "key": " Disk",  // Disk icon
-      "keyColor": "#FF00FF",
-      "valueColor": "#00CED1"
+      "key": "  Disk",
+      "keycolor": "blue"
     },
     {
-      "type": "battery",
-      "key": " Battery",  // Full battery
-      "keyColor": "#BD93F9",
-      "valueColor": "#00FFFF"
+      "type": "sound",
+      "key": "  SND",
+      "keyColor": "cyan"
     },
     {
-      "type": "locale",
-      "key": " Locale",  // Globe
-      "keyColor": "#FF00FF",
-      "valueColor": "#00CED1"
-    }
+        "type": "localip",
+        "key": " 󰩟 Local Ip",
+        "format": "{ipv4} {ifname}",
+        "keycolor": "yellow"
+    },
+    {
+        "type": "custom",
+        "format": "├──────────────────────────────────────────────────┤"
+    },
   ]
 }

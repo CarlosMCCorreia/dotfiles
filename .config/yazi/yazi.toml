@@ -1,0 +1,38 @@
+[mgr]
+sort_by = "alphabetical"
+sort_dir_first = true
+linemode = "size"
+show_hidden = true
+scrolloff = 3
+
+[preview]
+max_width = 80
+max_height = 40
+
+
+[[opener.rules]]
+name = "open images"
+ext = ["jpg", "jpeg", "png", "webp"]
+run = "imv \"$@\""
+
+[[opener.rules]]
+name = "open videos"
+ext = ["mp4", "mkv", "webm"]
+run = "mpv \"$@\""
+
+[[opener.rules]]
+name = "open text/code in nvim"
+ext = ["sh", "txt", "md", "py", "js", "ts", "lua", "json", "toml", "yaml", "yml", "rs", "c", "cpp"]
+run = "nvim \"$@\""
+
+[keymap.manager]
+"l" = "enter"
+"h" = "back"
+"q" = "close"
+"i" = "open"        # opens with imv/mpv or system opener
+"e" = "open_with"   # pick app to open with
+"c" = "copy"
+"d" = "delete"
+"m" = "move"
+"y" = "yank"
+"p" = "paste"

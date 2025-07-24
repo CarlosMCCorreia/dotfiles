@@ -1,0 +1,47 @@
+[manager]
+sort_by = "alphabetical"
+sort_dir_first = true
+linemode = "size"
+show_hidden = true
+scrolloff = 3
+
+[preview]
+max_width = 80
+max_height = 40
+
+[opener]
+image = ["imv"]
+video = ["mpv"]
+
+[opener."*.png"]
+run = "imv \"$@\""
+
+[opener."*.jpg"]
+run = "imv \"$@\""
+
+[opener."*.jpeg"]
+run = "imv \"$@\""
+
+[opener."*.webp"]
+run = "imv \"$@\""
+
+[opener."*.mp4"]
+run = "mpv \"$@\""
+
+[opener."*.mkv"]
+run = "mpv \"$@\""
+
+[opener."*.webm"]
+run = "mpv \"$@\""
+
+[keymap.manager]
+"l" = "enter"
+"h" = "back"
+"q" = "close"
+"i" = "open"        # opens with imv/mpv or system opener
+"e" = "open_with"   # pick app to open with
+"c" = "copy"
+"d" = "delete"
+"m" = "move"
+"y" = "yank"
+"p" = "paste"

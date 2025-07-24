@@ -5,10 +5,14 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto' 
+alias grep='rg' 
 alias ff='fastfetch'
 alias cat='bat'
+alias ls='exa --icons --group-directories-first'
+alias ll='exa -lah --icons --group-directories-first'
+alias tree='ls --tree'
+
+
 alias down='cd $HOME/Downloads'
 
 alias update='sudo pacman -Syu && yay -Syu'
